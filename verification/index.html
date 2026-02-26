@@ -11,10 +11,14 @@
 <body>
 <header class="topbar">
   <div class="container topbar-inner">
-    <a class="brand" href="../"><div class="logo"><b>IP</b></div><div><div class="t1">IPMA Publishing</div><div class="t2">Official Publishing & Archive</div></div></a>
+    <a class="brand" href="../">
+      <div class="logo" aria-hidden="true"><b>IP</b></div>
+      <div><div class="t1">IPMA Publishing</div><div class="t2">Official Publishing & Archive</div></div>
+    </a>
     <nav class="nav">
       <a class="pill home" href="../">홈(../)</a>
       <a class="pill" data-nav href="../catalog/">도서</a>
+      <a class="pill" data-nav href="../series/">시리즈</a>
       <a class="pill" data-nav href="../isbn/">ISBN</a>
       <a class="pill" data-nav href="../resources/">자료실</a>
       <a class="pill" data-nav href="../contact/">문의</a>
@@ -29,41 +33,71 @@
       <h1>정본 확인(Verification)</h1>
       <p class="lead">
         정본 확인은 “진짜/가짜”만이 아닙니다.  
-        <b>정확한 판(Edition)과 버전(Version)</b>을 확인해, 같은 자료를 같은 기준으로 쓰게 해줍니다.
+        <b>정확한 판(Edition) + 버전(Version) + 발행일 + 코드</b>가 일치하는지 확인해
+        같은 자료를 같은 기준으로 쓰게 해줍니다.
       </p>
       <div class="hr"></div>
       <div class="notice">
-        권장 규칙: <b>발행일 + 버전 + 검증 코드</b>가 모두 일치하면 정본입니다.
+        철학 프레임: <b>구조 &gt;&gt; 교차원리, 교차원리 기반 무도</b><br/>
+        구조적 기록은 교육과 연구의 “재현성”을 만들고, 검증은 “권위”를 만듭니다.
       </div>
     </div>
   </section>
 
   <section class="card pad">
-    <h2>빠른 조회(샘플)</h2>
-    <div class="item">
-      <p class="small" style="margin:0 0 8px;">
-        지금은 “샘플 화면”입니다. 실제 조회 기능(코드 입력→결과 표시)을 붙이려면
-        더블크로스처럼 `data`와 JS를 연결해 드릴 수 있어요.
-      </p>
-      <table class="table">
-        <tr><th>예시 코드</th><th>결과(샘플)</th></tr>
-        <tr><td><b>IPMA-PUB-DCV1-0001</b></td><td>DOUBLE CROSS Vol.1 / First Edition / v1.0 / 정본: YES</td></tr>
-        <tr><td><b>IPMA-PUB-XXXX-0002</b></td><td>미등록 코드(또는 오기재) / 문의 필요</td></tr>
+    <h2>코드 조회</h2>
+
+    <form id="verifyForm" class="item" style="display:flex; gap:10px; flex-wrap:wrap; align-items:center;">
+      <label for="verifyCode" class="small" style="min-width:92px;">검증 코드</label>
+      <input
+        id="verifyCode"
+        type="text"
+        inputmode="text"
+        autocomplete="off"
+        placeholder="예) IPMA-PUB-DCV1-0001"
+        style="flex:1; min-width:240px; height:44px; border-radius:14px; border:1px solid rgba(255,255,255,.18); background:rgba(0,0,0,.22); color:rgba(255,255,255,.92); padding:0 12px;"
+      />
+      <button class="btn primary" type="submit">조회</button>
+      <a class="btn" href="../contact/">문의</a>
+      <div class="small" style="width:100%; margin-top:6px;">
+        팁) QR로 연결할 때는 <b>/verification/?code=검증코드</b> 형식으로 바로 조회 화면이 뜹니다.
+      </div>
+    </form>
+
+    <div id="verifyResult" class="item" style="margin-top:12px; display:none;">
+      <div style="display:flex; align-items:center; justify-content:space-between; gap:10px; flex-wrap:wrap;">
+        <h3 id="resultTitle" style="margin:0; font-size:15px;">조회 결과</h3>
+        <span id="resultBadge" class="badge">—</span>
+      </div>
+      <div class="hr"></div>
+
+      <table class="table" aria-label="정본 확인 결과 표">
+        <tbody id="resultTable"></tbody>
       </table>
+
+      <p id="resultNote" class="small" style="margin-top:10px;"></p>
+
+      <div id="quickLinks" class="btnrow" style="display:none;">
+        <a class="btn" href="../isbn/">판/버전 규칙</a>
+        <a class="btn" href="../catalog/">도서 목록</a>
+        <a class="btn blue" href="../resources/">자료실</a>
+      </div>
     </div>
 
-    <div class="btnrow">
-      <a class="btn primary" href="../contact/">코드 등록/운영 문의</a>
-      <a class="btn" href="../isbn/">판/버전 규칙</a>
-    </div>
+    <div class="hr"></div>
+    <p class="small">
+      운영 참고: 코드 데이터는 <b>/data/verify.json</b>에서 관리합니다.  
+      새로운 도서/개정판이 나올 때마다 레코드만 추가하면 사이트는 자동으로 조회됩니다.
+    </p>
   </section>
 
   <footer class="footer">
     <div>© <span data-year></span> IPMA Publishing</div>
-    <div><a href="../isbn/">ISBN</a> · <a href="../catalog/">도서</a> · <a href="../contact/">문의</a></div>
+    <div><a href="../news/">소식</a> · <a href="../resources/">자료실</a> · <a href="../contact/">문의</a></div>
   </footer>
 </main>
 
 <script src="../assets/js/app.js"></script>
+<script src="../assets/js/verify.js"></script>
 </body>
 </html>
