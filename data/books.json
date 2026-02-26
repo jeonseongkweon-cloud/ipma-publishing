@@ -1,1 +1,47 @@
-
+{
+  "updated": "2026-02-26",
+  "books": [
+    {
+      "id": "dc-vol1",
+      "title": "DOUBLE CROSS Vol.1 — 선언·철학",
+      "subtitle": "구조 >> 교차원리, 교차원리 기반 무도",
+      "series": "DOUBLE CROSS Series",
+      "category": "무도/교육",
+      "format": "eBook / 인쇄",
+      "edition": "First Edition",
+      "version": "v1.0",
+      "publish_date": "2026-02-26",
+      "publisher": "IPMA Publishing",
+      "cover": "../assets/images/placeholders/cover-default.jpg",
+      "summary": "교차원리를 ‘구조’로 정리해 교육·연구·현장 적용을 하나의 언어로 통합합니다.",
+      "toc": [
+        "Part 1. 선언 — 왜 지금 교차원리인가",
+        "Part 2. 철학 — 재현 가능한 지도 언어",
+        "Part 3. 용어 — 정의/도해/구조",
+        "Part 4. 적용 — 체크리스트/프로토콜"
+      ],
+      "verification_code_example": "IPMA-PUB-DCV1-0001"
+    },
+    {
+      "id": "manual-instructor",
+      "title": "지도자 시스템 매뉴얼",
+      "subtitle": "운영·안전·윤리·평가 표준",
+      "series": "Education Series",
+      "category": "운영/표준",
+      "format": "PDF / 인쇄",
+      "edition": "Draft",
+      "version": "v0.9",
+      "publish_date": "TBD",
+      "publisher": "IPMA Publishing",
+      "cover": "../assets/images/placeholders/cover-default.jpg",
+      "summary": "현장 운영을 표준화하고, 평가·안전·윤리 기준을 문서로 고정합니다.",
+      "toc": [
+        "Part 1. 운영 원칙",
+        "Part 2. 안전/윤리",
+        "Part 3. 평가/기록",
+        "Part 4. 배포/정본 확인"
+      ],
+      "verification_code_example": ""
+    }
+  ]
+}
