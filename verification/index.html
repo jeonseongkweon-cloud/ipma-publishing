@@ -1,1 +1,69 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <title>정본 확인(Verification) | IPMA Publishing</title>
+  <meta name="description" content="검증 코드로 정본/판/버전/발행일을 확인합니다." />
+  <meta name="theme-color" content="#070b16" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+<header class="topbar">
+  <div class="container topbar-inner">
+    <a class="brand" href="../"><div class="logo"><b>IP</b></div><div><div class="t1">IPMA Publishing</div><div class="t2">Official Publishing & Archive</div></div></a>
+    <nav class="nav">
+      <a class="pill home" href="../">홈(../)</a>
+      <a class="pill" data-nav href="../catalog/">도서</a>
+      <a class="pill" data-nav href="../isbn/">ISBN</a>
+      <a class="pill" data-nav href="../resources/">자료실</a>
+      <a class="pill" data-nav href="../contact/">문의</a>
+    </nav>
+  </div>
+</header>
 
+<main class="container">
+  <section class="hero">
+    <div class="card pad">
+      <div class="kicker">VERIFICATION</div>
+      <h1>정본 확인(Verification)</h1>
+      <p class="lead">
+        정본 확인은 “진짜/가짜”만이 아닙니다.  
+        <b>정확한 판(Edition)과 버전(Version)</b>을 확인해, 같은 자료를 같은 기준으로 쓰게 해줍니다.
+      </p>
+      <div class="hr"></div>
+      <div class="notice">
+        권장 규칙: <b>발행일 + 버전 + 검증 코드</b>가 모두 일치하면 정본입니다.
+      </div>
+    </div>
+  </section>
+
+  <section class="card pad">
+    <h2>빠른 조회(샘플)</h2>
+    <div class="item">
+      <p class="small" style="margin:0 0 8px;">
+        지금은 “샘플 화면”입니다. 실제 조회 기능(코드 입력→결과 표시)을 붙이려면
+        더블크로스처럼 `data`와 JS를 연결해 드릴 수 있어요.
+      </p>
+      <table class="table">
+        <tr><th>예시 코드</th><th>결과(샘플)</th></tr>
+        <tr><td><b>IPMA-PUB-DCV1-0001</b></td><td>DOUBLE CROSS Vol.1 / First Edition / v1.0 / 정본: YES</td></tr>
+        <tr><td><b>IPMA-PUB-XXXX-0002</b></td><td>미등록 코드(또는 오기재) / 문의 필요</td></tr>
+      </table>
+    </div>
+
+    <div class="btnrow">
+      <a class="btn primary" href="../contact/">코드 등록/운영 문의</a>
+      <a class="btn" href="../isbn/">판/버전 규칙</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div>© <span data-year></span> IPMA Publishing</div>
+    <div><a href="../isbn/">ISBN</a> · <a href="../catalog/">도서</a> · <a href="../contact/">문의</a></div>
+  </footer>
+</main>
+
+<script src="../assets/js/app.js"></script>
+</body>
+</html>
