@@ -1,1 +1,41 @@
-
+{
+  "updated": "2026-02-26",
+  "records": [
+    {
+      "code": "IPMA-PUB-DCV1-0001",
+      "status": "valid",
+      "title": "DOUBLE CROSS Vol.1 — 선언·철학",
+      "edition": "First Edition",
+      "version": "v1.0",
+      "publish_date": "2026-02-26",
+      "publisher": "IPMA Publishing",
+      "series": "DOUBLE CROSS Series",
+      "book_url": "../catalog/book/",
+      "notes": "정본 확인: 발행일/버전/코드 일치"
+    },
+    {
+      "code": "IPMA-PUB-DCV1-0002",
+      "status": "valid",
+      "title": "DOUBLE CROSS Vol.1 — 선언·철학",
+      "edition": "First Edition",
+      "version": "v1.1",
+      "publish_date": "2026-03-10",
+      "publisher": "IPMA Publishing",
+      "series": "DOUBLE CROSS Series",
+      "book_url": "../catalog/book/",
+      "notes": "오탈자/표기 정리 반영(소규모 개정)"
+    },
+    {
+      "code": "IPMA-PUB-SAMPLE-9999",
+      "status": "hold",
+      "title": "등록 대기(샘플)",
+      "edition": "—",
+      "version": "—",
+      "publish_date": "—",
+      "publisher": "IPMA Publishing",
+      "series": "—",
+      "book_url": "",
+      "notes": "내부 등록/확인 중. 문의 바랍니다."
+    }
+  ]
+}
