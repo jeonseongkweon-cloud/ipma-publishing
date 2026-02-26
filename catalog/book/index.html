@@ -4,19 +4,22 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
   <title>도서 상세 | IPMA Publishing</title>
-  <meta name="description" content="도서 상세: 판/버전/정본 확인/목차/배포 안내." />
+  <meta name="description" content="도서 상세(자동): 판/버전/발행일/정본확인 연결." />
   <meta name="theme-color" content="#070b16" />
   <link rel="stylesheet" href="../../assets/css/style.css" />
 </head>
 <body>
 <header class="topbar">
   <div class="container topbar-inner">
-    <a class="brand" href="../../"><div class="logo"><b>IP</b></div><div><div class="t1">IPMA Publishing</div><div class="t2">Official Publishing & Archive</div></div></a>
+    <a class="brand" href="../../">
+      <div class="logo"><b>IP</b></div>
+      <div><div class="t1">IPMA Publishing</div><div class="t2">Official Publishing & Archive</div></div>
+    </a>
     <nav class="nav">
       <a class="pill home" href="../../">홈(../)</a>
       <a class="pill" data-nav href="../">도서</a>
       <a class="pill" data-nav href="../../series/">시리즈</a>
-      <a class="pill" data-nav href="../../authors/">저자</a>
+      <a class="pill" data-nav href="../../isbn/">ISBN</a>
       <a class="pill" data-nav href="../../verification/">정본확인</a>
       <a class="pill" data-nav href="../../contact/">문의</a>
     </nav>
@@ -25,81 +28,121 @@
 
 <main class="container">
   <section class="hero">
-    <div class="card pad">
+    <div class="card pad" id="bookHero">
       <div class="kicker">BOOK DETAIL</div>
-      <h1>DOUBLE CROSS Vol.1 — 선언·철학</h1>
-      <p class="lead">
-        <b>구조 &gt;&gt; 교차원리, 교차원리 기반 무도</b>를 출발점으로,
-        교육·연구·현장 적용을 하나의 언어로 정리합니다.
-      </p>
+      <h1 id="bTitle" style="margin-bottom:8px;">도서 상세</h1>
+      <p id="bSub" class="lead">도서 정보를 불러오는 중…</p>
 
-      <div class="badges">
-        <span class="badge">분야: 무도/교육</span>
-        <span class="badge">형태: eBook / 인쇄</span>
-        <span class="badge">버전: v1.0</span>
-        <span class="badge">판: 초판(First Edition)</span>
-      </div>
+      <div class="badges" id="bBadges"></div>
 
-      <div class="btnrow">
-        <a class="btn primary" href="../../verification/">정본 확인하기</a>
-        <a class="btn" href="../../distribution/">유통/구매</a>
-        <a class="btn blue" href="../../contact/">단체/기관 문의</a>
-      </div>
+      <div class="btnrow" id="bButtons" style="margin-top:14px;"></div>
+      <p class="small" style="margin-top:10px;">※ URL 예: <b>/catalog/book/?id=dc-vol1</b></p>
     </div>
   </section>
 
   <section class="card pad">
     <h2>도서 정보(공식)</h2>
-    <table class="table" aria-label="도서 정보 표">
-      <tr><th>항목</th><th>내용</th></tr>
-      <tr><td><b>정식 서명</b></td><td>DOUBLE CROSS Vol.1: Declaration & Philosophy</td></tr>
-      <tr><td><b>핵심 프레임</b></td><td>구조 &gt;&gt; 교차원리, 교차원리 기반 무도</td></tr>
-      <tr><td><b>판/버전</b></td><td>First Edition / v1.0</td></tr>
-      <tr><td><b>정본 기준</b></td><td>발행일 + 버전 + 검증 코드(Verification) 일치</td></tr>
-      <tr><td><b>사용 범위</b></td><td>교육/세미나/연구 참조(저작권 및 사용 규정 준수)</td></tr>
-    </table>
+    <table class="table"><tbody id="bTable"></tbody></table>
   </section>
 
   <section class="card pad">
-    <h2>목차(예시)</h2>
-    <div class="grid2">
-      <div class="item">
-        <h3>Part 1. 선언</h3>
-        <p>왜 지금 ‘교차원리’인가 / 구조를 기준으로 통합하는 이유</p>
-      </div>
-      <div class="item">
-        <h3>Part 2. 철학</h3>
-        <p>교육과 안전 / 재현 가능한 지도 언어 / 표준화</p>
-      </div>
-      <div class="item">
-        <h3>Part 3. 용어</h3>
-        <p>핵심 정의(Definition)와 도식(Structure) 정리</p>
-      </div>
-      <div class="item">
-        <h3>Part 4. 적용</h3>
-        <p>지도 현장 적용 / 체크리스트 / 기본 프로토콜</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="card pad">
-    <h2>개정/변경 이력(샘플)</h2>
-    <table class="table" aria-label="변경 이력 표">
-      <tr><th>날짜</th><th>버전</th><th>내용</th></tr>
-      <tr><td>YYYY-MM-DD</td><td>v1.0</td><td>초판 발행</td></tr>
-      <tr><td>YYYY-MM-DD</td><td>v1.1</td><td>오탈자/표기 정리(예정)</td></tr>
-    </table>
-    <p class="small" style="margin-top:10px;">
-      운영 팁: 개정판이 생길수록 “정본 확인”이 더 중요해집니다. Verification 페이지와 반드시 연결하세요.
-    </p>
+    <h2>목차</h2>
+    <div class="grid2" id="bToc"></div>
   </section>
 
   <footer class="footer">
     <div>© <span data-year></span> IPMA Publishing</div>
-    <div><a href="../">도서</a> · <a href="../../series/">시리즈</a> · <a href="../../verification/">정본확인</a></div>
+    <div><a href="../">도서</a> · <a href="../../verification/">정본확인</a> · <a href="../../contact/">문의</a></div>
   </footer>
 </main>
 
 <script src="../../assets/js/app.js"></script>
+<script>
+(async function(){
+  const id = new URL(location.href).searchParams.get("id") || "";
+  const $ = (s)=>document.querySelector(s);
+  const esc = (s)=>String(s??"").replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll(">","&gt;").replaceAll('"',"&quot;");
+
+  const DATA_URL = "../../data/books.json"; // book/ 기준
+
+  const bTitle = $("#bTitle");
+  const bSub = $("#bSub");
+  const bBadges = $("#bBadges");
+  const bButtons = $("#bButtons");
+  const bTable = $("#bTable");
+  const bToc = $("#bToc");
+
+  function badge(t){ return `<span class="badge">${esc(t)}</span>`; }
+
+  function row(k,v){ return `<tr><th>${esc(k)}</th><td>${v}</td></tr>`; }
+
+  try{
+    const res = await fetch(DATA_URL, {cache:"no-store"});
+    if(!res.ok) throw new Error("books.json 로드 실패");
+    const data = await res.json();
+    const book = (data.books||[]).find(b => String(b.id||"") === id);
+
+    if(!book){
+      bTitle.textContent = "도서를 찾을 수 없습니다";
+      bSub.textContent = "URL의 ?id= 값을 확인해 주세요.";
+      bBadges.innerHTML = badge("미등록");
+      bButtons.innerHTML = `<a class="btn" href="../">도서 목록으로</a>`;
+      bTable.innerHTML = row("입력 id", `<b>${esc(id||"(없음)")}</b>`) + row("안내","도서 데이터에 등록 후 다시 시도하세요.");
+      bToc.innerHTML = `<div class="item"><h3>Tip</h3><p>data/books.json에 id를 추가하면 자동으로 상세가 생성됩니다.</p></div>`;
+      return;
+    }
+
+    const pub = (book.publish_date && book.publish_date !== "TBD") ? book.publish_date : "발행 예정";
+
+    bTitle.textContent = book.title || "도서";
+    bSub.textContent = book.subtitle || "";
+
+    bBadges.innerHTML = [
+      book.series && badge(book.series),
+      book.category && badge(book.category),
+      book.format && badge(book.format),
+      book.edition && badge(book.edition),
+      book.version && badge(book.version),
+      badge(pub)
+    ].filter(Boolean).join("");
+
+    const verifyLink = book.verification_code_example
+      ? `../../verification/?code=${encodeURIComponent(book.verification_code_example)}`
+      : "../../verification/";
+
+    bButtons.innerHTML = `
+      <a class="btn primary" href="${verifyLink}">정본 확인</a>
+      <a class="btn" href="../../distribution/">유통/배포</a>
+      <a class="btn blue" href="../../contact/">문의</a>
+    `;
+
+    bTable.innerHTML = [
+      row("정식 서명", `<b>${esc(book.title)}</b>`),
+      row("부제/프레임", esc(book.subtitle || "-")),
+      row("시리즈", esc(book.series || "-")),
+      row("분야", esc(book.category || "-")),
+      row("형태", esc(book.format || "-")),
+      row("판(Edition)", `<b>${esc(book.edition || "-")}</b>`),
+      row("버전(Version)", `<b>${esc(book.version || "-")}</b>`),
+      row("발행일", esc(pub)),
+      row("발행처", esc(book.publisher || "IPMA Publishing")),
+      row("정본 확인", book.verification_code_example ? `<b>${esc(book.verification_code_example)}</b>` : "코드 준비 중")
+    ].join("");
+
+    const toc = book.toc || [];
+    bToc.innerHTML = toc.length
+      ? toc.map(line=>`<div class="item"><h3 style="margin:0 0 6px; font-size:15px;">항목</h3><p style="margin:0; color:rgba(255,255,255,.72); font-size:13px;">${esc(line)}</p></div>`).join("")
+      : `<div class="item"><h3>목차</h3><p>등록 예정</p></div>`;
+
+  }catch(e){
+    bTitle.textContent = "로딩 오류";
+    bSub.textContent = "books.json 경로/파일을 확인해 주세요.";
+    bBadges.innerHTML = `<span class="badge">오류</span>`;
+    bButtons.innerHTML = `<a class="btn" href="../">도서 목록으로</a>`;
+    bTable.innerHTML = row("안내","/data/books.json 누락 또는 경로 오류 가능성이 큽니다.");
+    bToc.innerHTML = `<div class="item"><h3>해결</h3><p>data/books.json 파일이 존재하는지, 경로가 정확한지 확인하세요.</p></div>`;
+  }
+})();
+</script>
 </body>
 </html>
