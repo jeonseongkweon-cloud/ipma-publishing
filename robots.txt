@@ -1,1 +1,4 @@
+User-agent: *
+Allow: /
 
+Sitemap: https://YOUR_GITHUB_ID.github.io/ipma-publishing/sitemap.xml
