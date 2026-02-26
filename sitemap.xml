@@ -1,1 +1,20 @@
-
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://YOUR_GITHUB_ID.github.io/ipma-publishing/</loc></url>
+  <url><loc>https://YOUR_GITHUB_ID.github.io/ipma-publishing/about/</loc></url>
+  <url><loc>https://YOUR_GITHUB_ID.github.io/ipma-publishing/imprints/</loc></url>
+  <url><loc>https://YOUR_GITHUB_ID.github.io/ipma-publishing/catalog/</loc></url>
+  <url><loc>https://YOUR_GITHUB_ID.github.io/ipma-publishing/catalog/book/</loc></url>
+  <url><loc>https://YOUR_GITHUB_ID.github.io/ipma-publishing/series/</loc></url>
+  <url><loc>https://YOUR_GITHUB_ID.github.io/ipma-publishing/series/s/</loc></url>
+  <url><loc>https://YOUR_GITHUB_ID.github.io/ipma-publishing/authors/</loc></url>
+  <url><loc>https://YOUR_GITHUB_ID.github.io/ipma-publishing/authors/a/</loc></url>
+  <url><loc>https://YOUR_GITHUB_ID.github.io/ipma-publishing/submissions/</loc></url>
+  <url><loc>https://YOUR_GITHUB_ID.github.io/ipma-publishing/isbn/</loc></url>
+  <url><loc>https://YOUR_GITHUB_ID.github.io/ipma-publishing/distribution/</loc></url>
+  <url><loc>https://YOUR_GITHUB_ID.github.io/ipma-publishing/resources/</loc></url>
+  <url><loc>https://YOUR_GITHUB_ID.github.io/ipma-publishing/news/</loc></url>
+  <url><loc>https://YOUR_GITHUB_ID.github.io/ipma-publishing/media/</loc></url>
+  <url><loc>https://YOUR_GITHUB_ID.github.io/ipma-publishing/verification/</loc></url>
+  <url><loc>https://YOUR_GITHUB_ID.github.io/ipma-publishing/contact/</loc></url>
+</urlset>
