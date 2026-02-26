@@ -4,14 +4,17 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
   <title>도서 | IPMA Publishing</title>
-  <meta name="description" content="IPMA Publishing 전체 도서 목록." />
+  <meta name="description" content="IPMA Publishing 전체 도서 목록(자동)." />
   <meta name="theme-color" content="#070b16" />
   <link rel="stylesheet" href="../assets/css/style.css" />
 </head>
 <body>
 <header class="topbar">
   <div class="container topbar-inner">
-    <a class="brand" href="../"><div class="logo"><b>IP</b></div><div><div class="t1">IPMA Publishing</div><div class="t2">Official Publishing & Archive</div></div></a>
+    <a class="brand" href="../">
+      <div class="logo"><b>IP</b></div>
+      <div><div class="t1">IPMA Publishing</div><div class="t2">Official Publishing & Archive</div></div>
+    </a>
     <nav class="nav">
       <a class="pill home" href="../">홈(../)</a>
       <a class="pill" data-nav href="../series/">시리즈</a>
@@ -28,45 +31,35 @@
     <div class="card pad">
       <div class="kicker">CATALOG</div>
       <h1>도서 목록</h1>
-      <p class="lead">정식 출간/발행된 자료의 공식 목록입니다. 각 도서는 ‘판’과 ‘정본’ 기준을 제공합니다.</p>
+      <p class="lead">도서 데이터(`data/books.json`) 기반으로 자동 생성됩니다.</p>
       <div class="btnrow">
-        <a class="btn primary" href="./book/">도서 상세 샘플 보기</a>
+        <a class="btn primary" href="../submissions/">출간 제안</a>
         <a class="btn" href="../resources/">서식/템플릿</a>
-        <a class="btn blue" href="../submissions/">출간 제안</a>
+        <a class="btn blue" href="../verification/">정본확인</a>
       </div>
+      <div class="hr"></div>
+      <p id="catalogMeta" class="small">업데이트: -</p>
     </div>
   </section>
 
   <section class="card pad">
-    <h2>대표 도서(예시)</h2>
-    <div class="grid3">
-      <a class="item" href="./book/">
-        <h3>DOUBLE CROSS Vol.1</h3>
-        <p>선언·철학 / 구조 &gt;&gt; 교차원리 기반. (샘플 상세 페이지)</p>
-      </a>
-      <div class="item">
-        <h3>지도자 시스템 매뉴얼</h3>
-        <p>운영·안전·윤리·평가 기준. (추가 예정)</p>
-      </div>
-      <div class="item">
-        <h3>현장 대응 가이드</h3>
-        <p>시나리오 기반 대응/통제/종료 프로토콜. (추가 예정)</p>
-      </div>
-    </div>
+    <h2>전체 목록</h2>
+    <div id="catalogGrid" class="grid3"></div>
 
     <div class="hr"></div>
-    <p class="small">
-      Tip) 실제 도서가 늘어나면 `data/books.json`을 만들고, JS로 자동 목록화하면 관리가 훨씬 쉬워집니다.
-      (원하시면 다음 단계에서 자동 목록 기능까지 붙여드릴게요.)
-    </p>
+    <div class="notice">
+      운영 팁: 새 책을 추가할 때는 <b>books.json</b>에 한 줄만 추가하면 끝!  
+      (사이트는 자동으로 목록/상세에 반영됩니다.)
+    </div>
   </section>
 
   <footer class="footer">
     <div>© <span data-year></span> IPMA Publishing</div>
-    <div><a href="../series/">시리즈</a> · <a href="../verification/">정본확인</a> · <a href="../contact/">문의</a></div>
+    <div><a href="../news/">소식</a> · <a href="../resources/">자료실</a> · <a href="../contact/">문의</a></div>
   </footer>
 </main>
 
 <script src="../assets/js/app.js"></script>
+<script src="../assets/js/catalog.js"></script>
 </body>
 </html>
